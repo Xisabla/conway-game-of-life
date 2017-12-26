@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Le jeu de la vie</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="./index.html">🚀 Le jeu de la vie</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a class="nav-link" href="./play.html">▶ Jouer</a></li>
+            <li class="nav-item"><a class="nav-link" href="./dev.html">👾 Mode développeur</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="jumbotron">
+        <h1>Le jeu de la vie</h1>
+    </div>
+
+    <div class="card border-info mb-3">
+        <div class="card-header bg-info text-white">Un peu d'histoire</div>
+        <div class="card-body">
+            <p>Le jeu de la vie est une simulation de vie cellulaire imaginé par <span class="font-weight-bold">John Horton Conway</span> en 1970,
+                ce jeu n'est pas vraiment un jeu, mais plus une évolution d'un système initialement donné.</p>
+            <a href="https://fr.wikipedia.org/wiki/Jeu_de_la_vie" target="_blank" class="btn btn-info">>> Wikipédia</a>
+        </div>
+    </div>
+
+    <div class="card border-success mb-3">
+        <div class="card-header bg-success text-white">Les règles</div>
+        <div class="card-body">
+            A chaque étape les cellules évoluent en fonctions des cellules voisins (adjacentes):
+            <ul>
+                <li class="text-primary">Une cellule naît si il y a 3 cellules vivantes autour</li>
+                <li class="text-danger">Une cellule ayant moins de 2 voisins meurt de sous-population</li>
+                <li class="text-danger">Une cellule ayant plus de 4 voisins meurt de sur-population</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script src="./js/jquery.min.js"></script>
+<script src="./js/popper.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+</body>
+
+</html>

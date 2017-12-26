@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
+.navbar {
+    margin-bottom: 30px;
+}
+
+.navbar .navbar-brand:hover {
+    opacity: 0.5;
+}
+
+form input[type=text][name=command] {
+    font-family: 'Source Code Pro', monospace;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Le jeu de la vie</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/game.css">
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="./index.html">🚀 Le jeu de la vie</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active"><a class="nav-link" href="./play.html">▶ Jouer</a></li>
+            <li class="nav-item"><a class="nav-link" href="./dev.html">👾 Mode développeur</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container text-center">
+    <div id="game-of-life"></div>
+    <br>
+
+    <div class="btn-group">
+        <a href="#" class="btn btn-primary" onclick="game.clear();" title="Clear"><i class="fas fa-eraser"></i></a>
+        <a href="#" class="btn btn-primary" onclick="game.randomize();" title="Random"><i class="fas fa-random"></i></a>
+    </div>
+
+    <div class="btn-group">
+        <a href="#" class="btn btn-primary" onclick="game.step();" title="Suivant"><i class="fas fa-step-forward"></i></a>
+        <a href="#" class="btn btn-primary" onclick="game.play(100);" title="Play"><i class="fas fa-play"></i></a>
+        <a href="#" class="btn btn-primary" onclick="if(game.config.autoplay !== '') {game.stop();}" title="Stop"><i class="fas fa-stop"></i></a>
+    </div>
+
+    <div class="btn-group">
+        <a href="#" class="btn btn-primary" onclick="game.model(1);" title="Modèle 1: LWSS">1</a>
+        <a href="#" class="btn btn-primary" onclick="game.model(2);" title="Modèle 2: Canon">2</a>
+    </div>
+
+</div>
+
+<script src="./js/jquery.min.js"></script>
+<script src="./js/popper.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/game.js"></script>
+<script>
+    game.init({'container': $('#game-of-life'), 'size': [50, 20]});
+    game.draw();
+</script>
+</body>
+
+</html>

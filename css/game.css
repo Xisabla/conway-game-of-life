@@ -1,0 +1,23 @@
+table.game-grid {
+	background: #ecf0f1;
+	margin: 0 auto;
+}
+
+table.game-grid tr td {
+	width: 20px;
+	height: 20px;
+	border: 1px solid black;
+}
+
+table.game-grid tr td:hover {
+	background: #bdc3c7;
+	cursor: pointer;
+}
+
+table.game-grid tr td.cell {
+	background: #3498db;
+}
+
+table.game-grid tr td.cell:hover {
+	background: #2980b9;
+}
